@@ -29,11 +29,12 @@
 
     function desenhaBarra(x, y, serie, cores, texto) {
 
-        desenhaTexto(x, y - 10, texto);
+        desenhaTexto(x + 5, y - 10, texto);
 
         var somaAltura = 0;
         for (var i = 0; i < serie.length; i++) {
             var altura = serie[i];
+                            //(x, y, largura, altura, cor)
             desenhaRetangulo(x, y + somaAltura, 50, altura, cores[i]);
             somaAltura = somaAltura + altura;
         }
